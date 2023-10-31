@@ -42,7 +42,7 @@ class VendingMachine
     # drink_name = []      #ドリンクネームの初期化
     @slot_money = slot_money
     @sales = 0         # 売上の金額
-    default_stock = 0
+    default_stock = 5
     @drinks = [{drink: "コーラ", price: 120, stock: default_stock},   
                {drink: "レッドブル", price: 200, stock: default_stock},
                {drink: "水", price: 100, stock: default_stock}]
@@ -72,6 +72,7 @@ class VendingMachine
         puts "払い戻し" 
 
       else
+      input_buy_drink = input_buy_drink.to_i
       drink = @drinks[input_buy_drink][:drink]
       price = @drinks[input_buy_drink][:price]
       stock = @drinks[input_buy_drink][:stock]
